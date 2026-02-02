@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Token Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-mount">
+        <div class="app-container">
+            <div class="login-wrapper">
+                <div class="login-block">
+                    <!--Logo-->
+                    <div class="logo-container">
+                        <svg class="discord-logo" width="100%" height="100%" viewBox="0 -28.5 256 256" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMidYMid">
+                            <g>
+                                <path
+                                    d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.404068 64.7481544,168.918324 57.7132148,164.955721 C59.6271962,163.53597 61.4746682,162.001693 63.2588102,160.36841 C105.733576,179.9966 150.365313,179.9966 192.420658,160.36841 C194.305151,162.022325 196.173256,163.55624 198.192131,164.955721 C191.076843,168.939229 183.700155,172.425301 176.048119,175.300261 C180.135252,183.341335 184.7864,190.971126 190.001482,198.148576 C211.123251,191.567697 232.607595,181.510915 254.776504,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 V16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5185935 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 V135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5185935 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 V135.09489 Z"
+                                    fill="currentColor"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="login-box">
+                        <div class="header">
+                            <h3>Welcome Back!</h3>
+                            <p>We're so excited to see you again!</p>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="token-input" class="input-label">
+                                TOKEN <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="password" id="token-input" name="token" required>
+                            </div>
+                        </div>
+
+                        <div class="forgot-wrapper">
+                            <a href="#" class="forgot-link">Forgot your password?</a>
+                        </div>
+
+                        <button type="button" id="login-btn" class="login-button">
+                            <div>Log In</div>
+                        </button>
+
+                        <div class="register-wrapper">
+                            <span>Need an account?</span>
+                            <a href="#" class="register-link">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
