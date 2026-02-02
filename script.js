@@ -8,14 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (token) {
             console.log('Token entered:', token);
-            loginBtn.innerHTML = '<div>Verifying...</div>';
+            loginBtn.innerHTML = '<div>Launching...</div>';
             loginBtn.style.backgroundColor = '#43b581';
 
-            setTimeout(() => {
-                alert(`Logged in with token: ${token}`);
-                loginBtn.innerHTML = '<div>Log In</div>';
-                loginBtn.style.backgroundColor = '';
-            }, 1000);
+            // Send to Backend
+            fetch('http://localhost:8000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ token: token })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    //  new Chrome window
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Error connecting to backend. Is server.py running?');
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        loginBtn.innerHTML = '<div>Log In</div>';
+                        loginBtn.style.backgroundColor = '';
+                    }, 3000);
+                });
+
         } else {
             loginBlock.animate([
                 { transform: 'translateX(0)' },
